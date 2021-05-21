@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result page</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+
+        <h2 style="text-align: center;">Query image</h1>
+        <!-- Show query image -->
+        <img src=" {{url_for('send_image', filename=image_name)}}" style="margin-left: 39%;">
+
+
+        <h1 style="text-align: center;">Result images</h1>
+
+        <hr>
+        <table style="width:100%">
+            <tr>
+                <th>id</th>
+                <th>image</th>
+            </tr>
+
+        <!-- Iterate through images -->
+            {% for image_name,id in result_paths.items() %}
+                    <tr>
+                        <td> {{id}}  </td>
+                        <td>   
+                            <img class="img-responsive" src=" {{url_for('static', filename=image_name)}}">
+                        </td>
+                    </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+
+</body>
+</html>
