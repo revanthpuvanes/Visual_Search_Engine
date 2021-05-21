@@ -1,0 +1,11 @@
+Flask==2.0.0
+Werkzeug==2.0.0
+flask-ngrok==0.0.25
+Jinja2==3.0.0
+matplotlib>=3.4.2
+numpy>=1.19.5
+pandas>=1.2.4
+Pillow==8.2.0
+gunicorn==19.9.0
+Keras-Preprocessing==1.1.2
+keras-nightly==2.5.0
